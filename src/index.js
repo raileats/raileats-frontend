@@ -1,9 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
-const App = () => {
-  return <h1>Hello, RailEats is Live!</h1>;
-};
+function App() {
+  return (
+    <div className="main-container">
+      <h1>🚆 RailEats</h1>
+      <p>Train Journey ka Swad, only Raileats ke Paas!</p>
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+      <form className="form">
+        <input type="text" placeholder="Train Number or PNR" required />
+        <button type="submit">Order Food</button>
+      </form>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
