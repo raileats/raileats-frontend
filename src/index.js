@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-Add src/index.js React entry point
+const App = () => {
+  return <h1>Hello, RailEats is Live!</h1>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
