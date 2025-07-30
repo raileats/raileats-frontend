@@ -11,7 +11,6 @@ export default function Search() {
       return;
     }
     console.log('Searching by PNR:', pnr);
-    // Yahan backend call ya API call kar sakte ho
   };
 
   const handleTrainSearch = (e) => {
@@ -21,7 +20,6 @@ export default function Search() {
       return;
     }
     console.log('Searching by Train Number:', trainNo);
-    // Yahan backend call ya API call kar sakte ho
   };
 
   return (
