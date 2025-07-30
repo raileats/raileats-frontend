@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       </header>
       <div className="main-content">
         <h1>Rail Journey ka Swad, only Raileats ke Paas!</h1>
-        <button>Order Now</button>
+        <Search />
       </div>
     </>
   );
