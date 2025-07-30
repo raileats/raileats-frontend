@@ -4,15 +4,16 @@ import './index.css';
 
 function App() {
   return (
-    <div className="main-container">
-      <h1>🚆 RailEats</h1>
-      <p>Train Journey ka Swad, only Raileats ke Paas!</p>
-
-      <form className="form">
-        <input type="text" placeholder="Train Number or PNR" required />
-        <button type="submit">Order Food</button>
-      </form>
-    </div>
+    <>
+      <header>
+        <div className="logo">🚆🍽️</div>
+        Raileats
+      </header>
+      <div className="main-content">
+        <h1>Rail Journey ka Swad, only Raileats ke Paas!</h1>
+        <button>Order Now</button>
+      </div>
+    </>
   );
 }
 
