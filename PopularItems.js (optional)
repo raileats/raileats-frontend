@@ -1,0 +1,28 @@
+import React from "react";
+
+const popularItems = [
+  { id: 1, name: "Paneer Butter Masala", image: "https://example.com/paneer.jpg", price: "₹150" },
+  { id: 2, name: "Veg Biryani", image: "https://example.com/biryani.jpg", price: "₹120" },
+  { id: 3, name: "Chicken Tandoori", image: "https://example.com/tandoori.jpg", price: "₹200" },
+];
+
+const PopularItems = () => {
+  return (
+    <div style={{ padding: "20px" }}>
+      <h2 style={{ textAlign: "center", color: "#ffcc00" }}>Popular Dishes</h2>
+      <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
+        {popularItems.map(item => (
+          <div key={item.id} style={{ width: "200px", boxShadow: "0 0 8px rgba(0,0,0,0.2)", borderRadius: "10px", overflow: "hidden", cursor: "pointer" }}>
+            <img src={item.image} alt={item.name} style={{ width: "100%", height: "140px", objectFit: "cover" }} />
+            <div style={{ padding: "10px", backgroundColor: "#fff", color: "#000", textAlign: "center" }}>
+              <h3>{item.name}</h3>
+              <p style={{ fontWeight: "bold", color: "#ff6600" }}>{item.price}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default PopularItems;
