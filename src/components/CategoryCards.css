@@ -1,0 +1,26 @@
+.category-section {
+  padding: 16px;
+}
+
+.category-section h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.category-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+}
+
+.category-card {
+  min-width: 100px;
+  text-align: center;
+}
+
+.category-card img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
