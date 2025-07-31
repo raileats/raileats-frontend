@@ -1,0 +1,26 @@
+.popular-section {
+  padding: 16px;
+}
+
+.popular-section h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.popular-items {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+}
+
+.popular-card {
+  min-width: 120px;
+  text-align: center;
+}
+
+.popular-card img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
