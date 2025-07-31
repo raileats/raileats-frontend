@@ -1,0 +1,27 @@
+/* src/components/AdminSidebar.css */
+.sidebar {
+  width: 220px;
+  background-color: #222;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+.sidebar footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+}
