@@ -1,12 +1,14 @@
 import React from 'react';
+import HeroBanner from './components/HeroBanner';
 import CategoryCards from './components/CategoryCards';
+import PopularItems from './components/PopularItems';
 
 function App() {
   return (
     <div className="App">
-      {/* Existing content */}
+      <HeroBanner />
       <CategoryCards />
-      {/* Other components */}
+      <PopularItems />
     </div>
   );
 }
