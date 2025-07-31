@@ -1,23 +1,14 @@
+// src/components/HeroBanner.js
 import React from "react";
+import "./HeroBanner.css"; // Optional CSS
 
-const HeroBanner = () => {
+function HeroBanner() {
   return (
-    <div style={{
-      backgroundImage: "url('https://example.com/hero-banner.jpg')",
-      height: "300px",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: "white",
-      fontSize: "2.5rem",
-      fontWeight: "bold",
-      textShadow: "2px 2px 4px #000"
-    }}>
-      RailEats - Train Food Delivered Fresh!
+    <div className="hero-banner">
+      <h1>Rail Journey ka Swad,<br />Only Raileats ke Paas!</h1>
+      <p>Order food on train by PNR or Train Number</p>
     </div>
   );
-};
+}
 
 export default HeroBanner;
