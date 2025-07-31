@@ -1,33 +1,22 @@
 // src/components/AdminSidebar.js
-import React from "react";
-
-const sidebarItems = [
-  "Dashboard",
-  "Orders",
-  "Outlets",
-  "Menu",
-  "Master",
-  "Train",
-  "Logout",
-];
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './AdminSidebar.css';
 
 function AdminSidebar() {
   return (
-    <div className="w-60 h-screen bg-gray-800 text-white flex flex-col justify-between">
-      <div>
-        <h2 className="text-2xl font-bold p-4 border-b border-gray-600">RailEats Admin</h2>
-        <ul className="p-2">
-          {sidebarItems.map((item, index) => (
-            <li
-              key={index}
-              className="p-3 hover:bg-gray-700 cursor-pointer border-b border-gray-700"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="p-4 text-sm text-gray-400 border-t border-gray-700">v.21</div>
+    <div className="sidebar">
+      <h2>RailEats Admin</h2>
+      <ul>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/orders">Orders</Link></li>
+        <li><Link to="/outlets">Outlets</Link></li>
+        <li><Link to="/menu">Menu</Link></li>
+        <li><Link to="/master">Master</Link></li>
+        <li><Link to="/train">Train</Link></li>
+        <li><Link to="/logout">Logout</Link></li>
+      </ul>
+      <footer>v.21</footer>
     </div>
   );
 }
