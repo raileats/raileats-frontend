@@ -12,4 +12,10 @@ function App() {
       <HeroBanner />
       <SearchByPNR />
       <SearchByTrain />
-      <CategoryCar
+      <CategoryCards />
+      <PopularItems />
+    </div>
+  );
+}
+
+export default App;
