@@ -1,0 +1,84 @@
+.re-footer {
+  background: #000;
+  color: #fff;
+  padding: 28px 16px 12px;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.re-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand .logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: #FFD700; /* gold-like yellow */
+}
+
+.brand .tag {
+  color: #fff;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+  color: #fff;
+}
+
+.links h4 {
+  margin-bottom: 8px;
+  color: #FFD700;
+}
+
+.links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.socials a {
+  margin-right: 8px;
+  display: inline-block;
+  background: #FFD700;
+  color: #000;
+  padding: 6px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact h4 { color: #FFD700; margin-bottom: 8px; }
+.contact p { margin: 4px 0; opacity: 0.95; }
+
+.re-footer-bottom {
+  margin-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 12px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .re-footer-inner { flex-direction: column; gap: 14px; }
+  .links { flex-wrap: wrap; }
+  .re-footer-bottom { flex-direction: column; gap: 6px; align-items: center; }
+}
