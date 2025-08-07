@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // 🏠 Home Page Components
 import HomePage from './components/HomePage';
+import Footer from './components/Footer';
 
 // 👤 Customer Pages
 import CustomerLogin from './components/CustomerLogin';
@@ -23,7 +24,7 @@ function App() {
     <Router>
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<><HomePage /><Footer /></>} />
         <Route path="/customer-login" element={<CustomerLogin />} />
         <Route path="/customer-dashboard" element={<CustomerDashboard />} />
 
@@ -66,4 +67,48 @@ function App() {
           element={
             <div className="admin-layout">
               <AdminSidebar />
-              <div className="main-co
+              <div className="main-content">
+                <Menu />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/master"
+          element={
+            <div className="admin-layout">
+              <AdminSidebar />
+              <div className="main-content">
+                <Master />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/train"
+          element={
+            <div className="admin-layout">
+              <AdminSidebar />
+              <div className="main-content">
+                <Train />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/logout"
+          element={
+            <div className="admin-layout">
+              <AdminSidebar />
+              <div className="main-content">
+                <Logout />
+              </div>
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
