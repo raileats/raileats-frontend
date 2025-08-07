@@ -1,0 +1,47 @@
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./CustomerDashboard.css";
+
+export default function CustomerDashboard() {
+  const [customer, setCustomer] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const data = localStorage.getItem("customerData");
+    if (data) {
+      setCustomer(JSON.parse(data));
+    } else {
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  if (!customer) return null;
+
+  return (
+    <div className="customer-dashboard">
+      <h2>Welcome, {customer.name}</h2>
+      <p><strong>Mobile:</strong> {customer.mobile}</p>
+      <p><strong>Wallet Balance:</strong> ₹{customer.wallet}</p>
+
+      <h3>Order History</h3>
+      {customer.orders.length === 0 ? (
+        <p>No orders yet.</p>
+      ) : (
+        <ul>
+          {customer.orders.map((order, index) => (
+            <li key={index}>{order}</li>
+          ))}
+        </ul>
+      )}
+
+      <button
+        onClick={() => {
+          localStorage.removeItem("customerData");
+          navigate("/login");
+        }}
+      >
+        Logout
+      </button>
+    </div>
+  );
+}
