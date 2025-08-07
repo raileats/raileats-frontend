@@ -1,0 +1,30 @@
+.customer-dashboard {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: black;
+  border-radius: 10px;
+  color: yellow;
+}
+
+.customer-dashboard h2 {
+  text-align: center;
+}
+
+.customer-dashboard h3 {
+  margin-top: 20px;
+}
+
+.customer-dashboard button {
+  margin-top: 20px;
+  padding: 10px;
+  background: yellow;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.customer-dashboard button:hover {
+  background: gold;
+}
