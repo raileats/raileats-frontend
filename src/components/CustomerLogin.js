@@ -1,0 +1,44 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./CustomerLogin.css";
+
+export default function CustomerLogin() {
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (!name || !mobile) {
+      alert("Please fill all fields!");
+      return;
+    }
+
+    // Save data to localStorage
+    localStorage.setItem("customerData", JSON.stringify({ name, mobile, wallet: 500, orders: [] }));
+
+    navigate("/dashboard");
+  };
+
+  return (
+    <div className="customer-login">
+      <h2>Customer Login</h2>
+      <form onSubmit={handleLogin}>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="tel"
+          placeholder="Enter mobile number"
+          value={mobile}
+          onChange={(e) => setMobile(e.target.value)}
+        />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+}
