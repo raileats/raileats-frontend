@@ -1,4 +1,7 @@
 // src/App.js
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CustomerLogin from "./components/CustomerLogin";
+import CustomerDashboard from "./components/CustomerDashboard";
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminSidebar from './components/AdminSidebar';
