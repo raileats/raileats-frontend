@@ -1,71 +1,69 @@
-// src/App.js
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Admin components
-import AdminSidebar from "./components/AdminSidebar";
-import Dashboard from "./components/Dashboard";
-import Orders from "./components/Orders";
-import Outlets from "./components/Outlets";
-import Menu from "./components/Menu";
-import Master from "./components/Master";
-import Train from "./components/Train";
-import Logout from "./components/Logout";
+// 🏠 Home Page Components
+import HomePage from './components/HomePage';
 
-// Customer components
-import CustomerLogin from "./components/CustomerLogin";
-import CustomerDashboard from "./components/CustomerDashboard";
-import HeroBanner from "./components/HeroBanner";
-import CategoryCards from "./components/CategoryCards";
-import PopularItems from "./components/PopularItems";
-import SearchByPNR from "./components/SearchByPNR";
-import SearchByTrain from "./components/SearchByTrain";
-import Footer from "./components/Footer";
+// 👤 Customer Pages
+import CustomerLogin from './components/CustomerLogin';
+import CustomerDashboard from './components/CustomerDashboard';
+
+// 🛠 Admin Panel Components
+import AdminSidebar from './components/AdminSidebar';
+import Dashboard from './components/Dashboard';
+import Orders from './components/Orders';
+import Outlets from './components/Outlets';
+import Menu from './components/Menu';
+import Master from './components/Master';
+import Train from './components/Train';
+import Logout from './components/Logout';
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* ===== Customer Routes ===== */}
-        <Route
-          path="/"
-          element={
-            <>
-              <HeroBanner />
-              <CategoryCards />
-              <PopularItems />
-              <SearchByPNR />
-              <SearchByTrain />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/login" element={<CustomerLogin />} />
+        {/* Public Routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/customer-login" element={<CustomerLogin />} />
         <Route path="/customer-dashboard" element={<CustomerDashboard />} />
 
-        {/* ===== Admin Panel Routes ===== */}
+        {/* Admin Routes with Sidebar */}
         <Route
-          path="/admin/*"
+          path="/dashboard"
           element={
             <div className="admin-layout">
               <AdminSidebar />
               <div className="main-content">
-                <Routes>
-                  <Route path="dashboard" element={<Dashboard />} />
-                  <Route path="orders" element={<Orders />} />
-                  <Route path="outlets" element={<Outlets />} />
-                  <Route path="menu" element={<Menu />} />
-                  <Route path="master" element={<Master />} />
-                  <Route path="train" element={<Train />} />
-                  <Route path="logout" element={<Logout />} />
-                </Routes>
+                <Dashboard />
               </div>
             </div>
           }
         />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+        <Route
+          path="/orders"
+          element={
+            <div className="admin-layout">
+              <AdminSidebar />
+              <div className="main-content">
+                <Orders />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/outlets"
+          element={
+            <div className="admin-layout">
+              <AdminSidebar />
+              <div className="main-content">
+                <Outlets />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/menu"
+          element={
+            <div className="admin-layout">
+              <AdminSidebar />
+              <div className="main-co
