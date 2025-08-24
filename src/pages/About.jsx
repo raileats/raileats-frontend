@@ -1,0 +1,1 @@
+import React from 'react'; export default ()=> (<div><h2>About</h2><p>Raileats demo</p></div>);

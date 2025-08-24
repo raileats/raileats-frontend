@@ -1,0 +1,3 @@
+
+import React,{useEffect,useState} from 'react';
+export default function Profile(){ const [profile,setProfile]=useState(null); useEffect(()=>{ const raw = localStorage.getItem('raileats_user'); if(!raw) return; const token = JSON.parse(raw).token; fetch((process.env.REACT_APP_API_URL||'') + '/api/user/profile', { headers: { Authorization: 'Bearer ' + token } }).then(r=>r.json()).then(d=>{ if(d.ok) setProfile(d.user); }); },[]); if(!profile) return <p>Loading...</p>; return (<div><h2>Profile</h2><div><b>Name:</b> {profile.name}</div><div><b>Phone:</b> {profile.phone}</div><div><b>Wallet:</b> ₹{profile.wallet}</div></div>); }
