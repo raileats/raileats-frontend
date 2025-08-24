@@ -1,18 +1,19 @@
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
+import React from "react";
+import HeroImg from "../assets/hero-boy-food.jpg"; // apni image ka path yaha sahi karo
 
-/* ✅ Mobile: stack vertically */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+const Hero = () => {
+  return (
+    <section className="hero container">
+      <div className="hero-text">
+        <h1>Rail Journey ka Swad</h1>
+        <p>Fresh food delivered to your seat.</p>
+        <button className="btn">Order Now</button>
+      </div>
+      <div className="hero-image">
+        <img src={HeroImg} alt="Delivery Boy" />
+      </div>
+    </section>
+  );
+};
 
-  .hero img {
-    max-width: 80%;
-  }
-}
+export default Hero;
