@@ -1,1 +1,18 @@
-import React from 'react'; export default ()=> (<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:18}}><div style={{background:'#fff',padding:18,borderRadius:10}}><h1>Rail Journey ka Swad</h1><p>Fresh food delivered to your seat.</p><div style={{marginTop:12}}><a href='#' className='btn'>Order Now</a></div></div><div style={{borderRadius:10,overflow:'hidden'}}><img src='/assets/delivery-boy.jpg' style={{width:'100%'}}/></div></div>);
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ✅ Mobile: stack vertically */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 80%;
+  }
+}
