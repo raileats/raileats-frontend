@@ -1,60 +1,62 @@
-:root {
-  --yellow: #ffd300;
-}
-
 /* Base styles - Mobile First */
 body {
   margin: 0;
-  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
-  background: #fffdf7;
-  color: #111;
+  padding: 0;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  background: #fffef5; /* light lemon background */
+  color: #111;
 }
 
-/* Container */
+/* Container for consistent spacing */
 .container {
-  max-width: 1100px;
-  margin: 18px auto;
-  padding: 0 16px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Button */
-.btn {
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar Example */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   background: #000;
   color: #fff;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 0;
-  cursor: pointer;
-  font-size: 0.95rem;
 }
 
-/* Grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+.navbar .menu {
+  display: none; /* hidden in mobile */
 }
 
-/* ✅ Tablet screens */
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ✅ Mobile screens */
-@media (max-width: 500px) {
+/* ✅ Tablet Screens */
+@media (min-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 17px;
   }
 
-  .grid {
-    grid-template-columns: 1fr; /* single column on small phones */
+  .navbar .menu {
+    display: block; /* menu visible on tablet+ */
+  }
+}
+
+/* ✅ Desktop Screens */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
   }
 
-  .btn {
-    width: 100%; /* buttons full width for easy tap */
-    padding: 12px
+  .container {
+    padding: 2rem;
+  }
+}
